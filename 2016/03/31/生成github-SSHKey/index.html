@@ -6,16 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>生成github SSHKey | Hu Dingfeng Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
+  <meta name="description" content="生成ssh key 步骤1.配置用户名&amp;amp;&amp;amp;邮箱git config user.name &amp;quot;用户名&amp;quot;git config user.email &amp;quot;邮箱&amp;quot;
+2.生成ssh keyssh-keygen -t rsa -C &amp;quot;邮箱&amp;quot;
+然后根据提示连续回车即可在~/.ssh目录下得到id_rsa和id_rsa.pub两个文件，id_">
 <meta property="og:type" content="article">
 <meta property="og:title" content="生成github SSHKey">
 <meta property="og:url" content="www.hudingfeng.com/2016/03/31/生成github-SSHKey/index.html">
 <meta property="og:site_name" content="Hu Dingfeng Blog">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-03-30T18:40:43.000Z">
+<meta property="og:description" content="生成ssh key 步骤1.配置用户名&amp;amp;&amp;amp;邮箱git config user.name &amp;quot;用户名&amp;quot;git config user.email &amp;quot;邮箱&amp;quot;
+2.生成ssh keyssh-keygen -t rsa -C &amp;quot;邮箱&amp;quot;
+然后根据提示连续回车即可在~/.ssh目录下得到id_rsa和id_rsa.pub两个文件，id_">
+<meta property="og:updated_time" content="2016-03-30T20:29:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="生成github SSHKey">
-<meta name="twitter:description">
+<meta name="twitter:description" content="生成ssh key 步骤1.配置用户名&amp;amp;&amp;amp;邮箱git config user.name &amp;quot;用户名&amp;quot;git config user.email &amp;quot;邮箱&amp;quot;
+2.生成ssh keyssh-keygen -t rsa -C &amp;quot;邮箱&amp;quot;
+然后根据提示连续回车即可在~/.ssh目录下得到id_rsa和id_rsa.pub两个文件，id_">
   
     <link rel="alternative" href="/atom.xml" title="Hu Dingfeng Blog" type="application/atom+xml">
   
@@ -226,7 +232,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>生成ssh key 步骤<br>1.配置用户名&amp;&amp;邮箱<br><code>git config user.name &quot;用户名&quot;</code><br><code>git config user.email &quot;邮箱&quot;</code></p>
+<p>2.生成ssh key<br><code>ssh-keygen -t rsa -C &quot;邮箱&quot;</code></p>
+<p>然后根据提示连续回车即可在~/.ssh目录下得到id_rsa和id_rsa.pub两个文件，id_rsa.pub文件里存放的就是我们要使用的key。</p>
+<p>3.上传github<br>打开<a href="https://github.com/settings/keys" target="_blank" rel="external">https://github.com/settings/keys</a> 上传 </p>
+
       
     </div>
     

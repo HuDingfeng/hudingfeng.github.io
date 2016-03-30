@@ -220,7 +220,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>生成ssh key 步骤<br>1.配置用户名&amp;&amp;邮箱<br><code>git config user.name &quot;用户名&quot;</code><br><code>git config user.email &quot;邮箱&quot;</code></p>
+<p>2.生成ssh key<br><code>ssh-keygen -t rsa -C &quot;邮箱&quot;</code></p>
+<p>然后根据提示连续回车即可在~/.ssh目录下得到id_rsa和id_rsa.pub两个文件，id_rsa.pub文件里存放的就是我们要使用的key。</p>
+<p>3.上传github<br>打开<a href="https://github.com/settings/keys" target="_blank" rel="external">https://github.com/settings/keys</a> 上传 </p>
+
       
     </div>
     
