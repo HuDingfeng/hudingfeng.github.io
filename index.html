@@ -202,6 +202,78 @@
 
       <div class="body-wrap">
   
+    <article id="post-关于git-上传时候遇到的问题" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/08/关于git-上传时候遇到的问题/" class="article-date">
+  	<time datetime="2016-06-08T09:09:48.000Z" itemprop="datePublished">2016-06-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/08/关于git-上传时候遇到的问题/">关于git 上传时候遇到的问题</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="一-、已经remote过的"><a href="#一-、已经remote过的" class="headerlink" title="一 、已经remote过的"></a>一 、已经remote过的</h4><p>首先删除origin</p>
+<ul>
+<li><p><code>git remote rm origin</code></p>
+<p>然后</p>
+<ul>
+<li><code>git remote add origin https://....</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="二、上传之后看不见代码的情况："><a href="#二、上传之后看不见代码的情况：" class="headerlink" title="二、上传之后看不见代码的情况："></a>二、上传之后看不见代码的情况：</h4><ul>
+<li><p>第一可能是pc上仓库名称有特殊字符，导致不能指向仓库</p>
+</li>
+<li><p>第二可能是文件过大导致上传进程被干掉 解决方案执行 <code>git config http.postBuffer 524288000</code> 然后再push</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IOS/">IOS</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+1
+ 
+
+  
     <article id="post-关于cocoaPods-install-update-卡死问题" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
