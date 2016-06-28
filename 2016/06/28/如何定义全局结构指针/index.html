@@ -4,18 +4,36 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Missing iOS Distribution signing identity问题解决 | Hu Dingfeng Blog</title>
+  <title>如何定义全局结构指针 | Hu Dingfeng Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Missing iOS Distribution signing identity for XXXXXX我在stackoverflow找到这样的一段回答：12345The issue is because the Apple WWDRCA expired today (Feb 14, 2016): https://developer.apple.com/support/certificates/e">
+  <meta name="description" content="如果在 iPhone 开发中想在 main 方法里定义一个全局结构指针,例如:typedef struct
+{
+int a;
+int b; 
+}S;
+S *s;
+放在.pch 文件就能使之成为全局结构指针在其它类用 extern 引用,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Missing iOS Distribution signing identity问题解决">
-<meta property="og:url" content="www.hudingfeng.com/2016/04/15/Missing-iOS-Distribution-signing-identity问题解决/index.html">
+<meta property="og:title" content="如何定义全局结构指针">
+<meta property="og:url" content="www.hudingfeng.com/2016/06/28/如何定义全局结构指针/index.html">
 <meta property="og:site_name" content="Hu Dingfeng Blog">
-<meta property="og:description" content="Missing iOS Distribution signing identity for XXXXXX我在stackoverflow找到这样的一段回答：12345The issue is because the Apple WWDRCA expired today (Feb 14, 2016): https://developer.apple.com/support/certificates/e">
-<meta property="og:updated_time" content="2016-04-15T14:19:06.000Z">
+<meta property="og:description" content="如果在 iPhone 开发中想在 main 方法里定义一个全局结构指针,例如:typedef struct
+{
+int a;
+int b; 
+}S;
+S *s;
+放在.pch 文件就能使之成为全局结构指针在其它类用 extern 引用,">
+<meta property="og:updated_time" content="2016-06-28T09:35:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Missing iOS Distribution signing identity问题解决">
-<meta name="twitter:description" content="Missing iOS Distribution signing identity for XXXXXX我在stackoverflow找到这样的一段回答：12345The issue is because the Apple WWDRCA expired today (Feb 14, 2016): https://developer.apple.com/support/certificates/e">
+<meta name="twitter:title" content="如何定义全局结构指针">
+<meta name="twitter:description" content="如果在 iPhone 开发中想在 main 方法里定义一个全局结构指针,例如:typedef struct
+{
+int a;
+int b; 
+}S;
+S *s;
+放在.pch 文件就能使之成为全局结构指针在其它类用 extern 引用,">
   
     <link rel="alternative" href="/atom.xml" title="Hu Dingfeng Blog" type="application/atom+xml">
   
@@ -201,11 +219,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Missing-iOS-Distribution-signing-identity问题解决" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-如何定义全局结构指针" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/15/Missing-iOS-Distribution-signing-identity问题解决/" class="article-date">
-  	<time datetime="2016-04-15T14:12:32.000Z" itemprop="datePublished">2016-04-15</time>
+      <a href="/2016/06/28/如何定义全局结构指针/" class="article-date">
+  	<time datetime="2016-06-28T09:31:29.000Z" itemprop="datePublished">2016-06-28</time>
 </a>
     </div>
   
@@ -218,7 +236,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Missing iOS Distribution signing identity问题解决
+      如何定义全局结构指针
     </h1>
   
 
@@ -238,9 +256,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Missing-iOS-Distribution-signing-identity-for-XXXXXX"><a href="#Missing-iOS-Distribution-signing-identity-for-XXXXXX" class="headerlink" title="Missing iOS Distribution signing identity for XXXXXX"></a>Missing iOS Distribution signing identity for XXXXXX</h3><h4 id="我在stackoverflow找到这样的一段回答："><a href="#我在stackoverflow找到这样的一段回答：" class="headerlink" title="我在stackoverflow找到这样的一段回答："></a>我在stackoverflow找到这样的一段回答：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">The issue is because the Apple WWDRCA expired today (Feb 14, 2016): https://developer.apple.com/support/certificates/expiration/</span><br><span class="line"></span><br><span class="line">Open Keychain Access, and in the menu, click View -&gt; Show Expired Certificates. Then, delete the expired Apple Worldwide Developer Relations Certificate Authority from both the login and System Keychains. Install the renewed certificate from Apple by downloading from https://developer.apple.com/certificationauthority/AppleWWDRCA.cer and then opening it.</span><br><span class="line"></span><br><span class="line">Also, you might need to restart Xcode to reflect the changes. Then, clean and build your project then re-try generating your archive.</span><br></pre></td></tr></table></figure>
-<p>####大致意思是说Apple WWDRCA 证书到期 让我们去keychain钥匙串里找到“显示”-&gt;”显示过期证书” 然后找到 Apple Worldwide Developer Relations Certificate 然后delete（在登录和系统里都delete）掉 然后根据他提供的地址<a href="https://developer.apple.com/certificationauthority/AppleWWDRCA.cer" target="_blank" rel="external">https://developer.apple.com/certificationauthority/AppleWWDRCA.cer</a>去下载最新的证书  然后分别重新安装在登录和系统中 再次编辑证书 就ok了</p>
-
+        <h4 id="如果在-iPhone-开发中想在-main-方法里定义一个全局结构指针"><a href="#如果在-iPhone-开发中想在-main-方法里定义一个全局结构指针" class="headerlink" title="如果在 iPhone 开发中想在 main 方法里定义一个全局结构指针,"></a>如果在 iPhone 开发中想在 main 方法里定义一个全局结构指针,</h4><h5 id="例如"><a href="#例如" class="headerlink" title="例如:"></a>例如:</h5><p><code>typedef struct</code></p>
+<p><code>{</code></p>
+<p><code>int a;</code></p>
+<p><code>int b;</code> </p>
+<p><code>}S;</code></p>
+<p><code>S *s;</code></p>
+<h5 id="放在-pch-文件就能使之成为全局结构指针在其它类用-extern-引用"><a href="#放在-pch-文件就能使之成为全局结构指针在其它类用-extern-引用" class="headerlink" title="放在.pch 文件就能使之成为全局结构指针在其它类用 extern 引用,"></a>放在.pch 文件就能使之成为全局结构指针在其它类用 extern 引用,</h5>
       
     </div>
     
@@ -249,18 +271,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/04/20/关于多台MAC共用同一开发证书/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          关于多台MAC共用同一开发证书
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/04/12/关于git-pull和git-fetch的区别/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于git pull和git fetch的区别</div>
+    <a href="/2016/06/08/关于git-上传时候遇到的问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于git 上传时候遇到的问题</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -295,7 +308,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Missing-iOS-Distribution-signing-identity问题解决" data-title="Missing iOS Distribution signing identity问题解决" data-url="www.hudingfeng.com/2016/04/15/Missing-iOS-Distribution-signing-identity问题解决/"></div>
+	<div class="ds-thread" data-thread-key="如何定义全局结构指针" data-title="如何定义全局结构指针" data-url="www.hudingfeng.com/2016/06/28/如何定义全局结构指针/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
