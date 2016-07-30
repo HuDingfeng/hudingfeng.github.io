@@ -4,36 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>如何定义全局结构指针 | Hu Dingfeng Blog</title>
+  <title>IOS tips (持续更新) | Hu Dingfeng Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="如果在 iPhone 开发中想在 main 方法里定义一个全局结构指针。例如:typedef struct
-{
-int a;
-int b; 
-}S;
-S *s;
-放在.pch 文件就能使之成为全局结构指针在其它类用 extern 引用,">
+  <meta name="description" content="在IOS开发过程中，难免遇到一些坑，总结一些开发技巧，记录一下,持续更新。一、 架构设计二、 环境配置三、代码性能四、开发技巧">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何定义全局结构指针">
-<meta property="og:url" content="www.hudingfeng.com/2016/06/28/如何定义全局结构指针/index.html">
+<meta property="og:title" content="IOS tips (持续更新)">
+<meta property="og:url" content="www.hudingfeng.com/2016/07/30/IOS-tips-持续更新/index.html">
 <meta property="og:site_name" content="Hu Dingfeng Blog">
-<meta property="og:description" content="如果在 iPhone 开发中想在 main 方法里定义一个全局结构指针。例如:typedef struct
-{
-int a;
-int b; 
-}S;
-S *s;
-放在.pch 文件就能使之成为全局结构指针在其它类用 extern 引用,">
-<meta property="og:updated_time" content="2016-06-29T02:47:04.000Z">
+<meta property="og:description" content="在IOS开发过程中，难免遇到一些坑，总结一些开发技巧，记录一下,持续更新。一、 架构设计二、 环境配置三、代码性能四、开发技巧">
+<meta property="og:updated_time" content="2016-07-30T14:06:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何定义全局结构指针">
-<meta name="twitter:description" content="如果在 iPhone 开发中想在 main 方法里定义一个全局结构指针。例如:typedef struct
-{
-int a;
-int b; 
-}S;
-S *s;
-放在.pch 文件就能使之成为全局结构指针在其它类用 extern 引用,">
+<meta name="twitter:title" content="IOS tips (持续更新)">
+<meta name="twitter:description" content="在IOS开发过程中，难免遇到一些坑，总结一些开发技巧，记录一下,持续更新。一、 架构设计二、 环境配置三、代码性能四、开发技巧">
   
     <link rel="alternative" href="/atom.xml" title="Hu Dingfeng Blog" type="application/atom+xml">
   
@@ -219,11 +201,11 @@ S *s;
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-如何定义全局结构指针" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-IOS-tips-持续更新" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/28/如何定义全局结构指针/" class="article-date">
-  	<time datetime="2016-06-28T09:31:29.000Z" itemprop="datePublished">2016-06-28</time>
+      <a href="/2016/07/30/IOS-tips-持续更新/" class="article-date">
+  	<time datetime="2016-07-30T13:51:53.000Z" itemprop="datePublished">2016-07-30</time>
 </a>
     </div>
   
@@ -236,7 +218,7 @@ S *s;
         
   
     <h1 class="article-title" itemprop="name">
-      如何定义全局结构指针
+      IOS tips (持续更新)
     </h1>
   
 
@@ -256,13 +238,7 @@ S *s;
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="如果在-iPhone-开发中想在-main-方法里定义一个全局结构指针。"><a href="#如果在-iPhone-开发中想在-main-方法里定义一个全局结构指针。" class="headerlink" title="如果在 iPhone 开发中想在 main 方法里定义一个全局结构指针。"></a>如果在 iPhone 开发中想在 main 方法里定义一个全局结构指针。</h4><h5 id="例如"><a href="#例如" class="headerlink" title="例如:"></a>例如:</h5><p><code>typedef struct</code></p>
-<p><code>{</code></p>
-<p><code>int a;</code></p>
-<p><code>int b;</code> </p>
-<p><code>}S;</code></p>
-<p><code>S *s;</code></p>
-<h5 id="放在-pch-文件就能使之成为全局结构指针在其它类用-extern-引用"><a href="#放在-pch-文件就能使之成为全局结构指针在其它类用-extern-引用" class="headerlink" title="放在.pch 文件就能使之成为全局结构指针在其它类用 extern 引用,"></a>放在.pch 文件就能使之成为全局结构指针在其它类用 extern 引用,</h5>
+        <h6 id="在IOS开发过程中，难免遇到一些坑，总结一些开发技巧，记录一下-持续更新。"><a href="#在IOS开发过程中，难免遇到一些坑，总结一些开发技巧，记录一下-持续更新。" class="headerlink" title="在IOS开发过程中，难免遇到一些坑，总结一些开发技巧，记录一下,持续更新。"></a>在IOS开发过程中，难免遇到一些坑，总结一些开发技巧，记录一下,持续更新。</h6><h3 id="一、-架构设计"><a href="#一、-架构设计" class="headerlink" title="一、 架构设计"></a>一、 架构设计</h3><h3 id="二、-环境配置"><a href="#二、-环境配置" class="headerlink" title="二、 环境配置"></a>二、 环境配置</h3><h3 id="三、代码性能"><a href="#三、代码性能" class="headerlink" title="三、代码性能"></a>三、代码性能</h3><h3 id="四、开发技巧"><a href="#四、开发技巧" class="headerlink" title="四、开发技巧"></a>四、开发技巧</h3>
       
     </div>
     
@@ -271,18 +247,9 @@ S *s;
     
 <nav id="article-nav">
   
-    <a href="/2016/07/30/IOS-tips-持续更新/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          IOS tips (持续更新)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/06/08/关于git-上传时候遇到的问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于git 上传时候遇到的问题</div>
+    <a href="/2016/06/28/如何定义全局结构指针/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何定义全局结构指针</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -317,7 +284,7 @@ S *s;
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="如何定义全局结构指针" data-title="如何定义全局结构指针" data-url="www.hudingfeng.com/2016/06/28/如何定义全局结构指针/"></div>
+	<div class="ds-thread" data-thread-key="IOS-tips-持续更新" data-title="IOS tips (持续更新)" data-url="www.hudingfeng.com/2016/07/30/IOS-tips-持续更新/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
