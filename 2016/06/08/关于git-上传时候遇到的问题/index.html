@@ -36,7 +36,7 @@ git remote add origin https://....
 第一可能是pc上仓库名称有特殊字符，导致不能指向仓库
 
 第二可能是文件过大导致上传进程被干掉 解决方案执行 git config http.postBuffer 524288000 然后再pu">
-<meta property="og:updated_time" content="2016-06-08T09:16:13.000Z">
+<meta property="og:updated_time" content="2016-08-29T02:08:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于git 上传时候遇到的问题">
 <meta name="twitter:description" content="一 、已经remote过的首先删除origin
@@ -114,7 +114,7 @@ git remote add origin https://....
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -287,7 +287,11 @@ git remote add origin https://....
 <li><p>第一可能是pc上仓库名称有特殊字符，导致不能指向仓库</p>
 </li>
 <li><p>第二可能是文件过大导致上传进程被干掉 解决方案执行 <code>git config http.postBuffer 524288000</code> 然后再push</p>
-</li>
+<h4 id="三、删除本地仓库的版本控制"><a href="#三、删除本地仓库的版本控制" class="headerlink" title="三、删除本地仓库的版本控制"></a>三、删除本地仓库的版本控制</h4></li>
+</ul>
+<ul>
+<li>//删除文件夹下的所有 .svn 文件<br>find . -name “.svn” | xargs rm -Rf</li>
+<li>//删除文件夹下的所有 .git 文件<br>find . -name “.git” | xargs rm -Rf</li>
 </ul>
 
       
