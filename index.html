@@ -77,7 +77,7 @@
 						<li>Links</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -201,6 +201,95 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-IOS-常用" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/30/IOS-常用/" class="article-date">
+  	<time datetime="2017-11-30T14:44:12.000Z" itemprop="datePublished">2017-11-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/30/IOS-常用/">Objective-c常用的函数，常数变量</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Objective-c常用的函数，常数变量"><a href="#Objective-c常用的函数，常数变量" class="headerlink" title="Objective-c常用的函数，常数变量"></a>Objective-c常用的函数，常数变量</h2><h3 id="算术函数"><a href="#算术函数" class="headerlink" title="算术函数"></a>算术函数</h3><ul>
+<li>int rand()    随机数生成。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">srand(time(nil));　//随机数初期化</span><br><span class="line">int val = rand()P;　//0～49之间的随机数</span><br></pre></td></tr></table></figure>
+<ul>
+<li>int abs(int a)    整数的绝对值</li>
+</ul>
+<figure class="highlight plain"><figcaption><span>val = abs(-8);</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">　→8</span><br><span class="line">※浮点数的时候用fabs。</span><br></pre></td></tr></table></figure>
+<ul>
+<li>double fabs(double a)    浮点数的绝对值</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">（例）double val = fabs(-12.345);</span><br><span class="line">　→12.345</span><br></pre></td></tr></table></figure>
+<ul>
+<li>double floor(double a)    返回浮点数整数部分（舍弃小数点）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">（例）double val = floor(12.345);</span><br><span class="line">　→12.000</span><br></pre></td></tr></table></figure>
+<ul>
+<li>double ceil(double a);    返回浮点数整数部分（舍弃小数点部分，往个位数进1）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">（例）double val = ceil(12.345);</span><br><span class="line">　→13.000</span><br></pre></td></tr></table></figure>
+<ul>
+<li>double pow(double a, double b)    a的b次方</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">double val = pow(2, 3);</span><br><span class="line">　→8</span><br></pre></td></tr></table></figure>
+<ul>
+<li>double sqrt(double a)    a的平方根</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double val = sqrt(2);→1.41421356</span><br></pre></td></tr></table></figure>
+<p>　</p>
+<h3 id="三角函数"><a href="#三角函数" class="headerlink" title="三角函数"></a>三角函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">double cos(double a)	余弦函数　（a：弧度）</span><br><span class="line">double sin(double a)	正弦函数　（a：弧度）</span><br><span class="line">double tan(double a)	正切函数　（a：弧度）</span><br><span class="line">double asin(double a)	反正弦值　（a：弧度）</span><br><span class="line">double acos(double a)	反余弦函数（a：弧度）</span><br><span class="line">double atan(double a)	反正切函数</span><br><span class="line">double atan2(double a, double b)	返回给定的 a 及 b 坐标值的反正切值</span><br></pre></td></tr></table></figure>
+<h3 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">double log(double a)	以e 为底的对数值</span><br><span class="line">double log10(double a)	对数函数log</span><br></pre></td></tr></table></figure>
+<h3 id="常数"><a href="#常数" class="headerlink" title="常数"></a>常数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">M_PI	圆周率（=π）</span><br><span class="line">M_PI_2	圆周率的１/２（=π/2）</span><br><span class="line">M_PI_4	圆周率的１/４（=π/4）</span><br><span class="line">M_1_PI	=1/π</span><br><span class="line">M_2_PI	=2/π</span><br><span class="line">M_E	=e</span><br><span class="line">M_LOG2E	log_2(e)</span><br><span class="line">M_LOG10E	log_10(e)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IOS/">IOS</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+1
+ 
+
   
     <article id="post-git使用" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -717,82 +806,6 @@
 <p><code>pod update --verbose --no-repo-update</code></p>
 <h5 id="执行pod-update想要更新某一个库时"><a href="#执行pod-update想要更新某一个库时" class="headerlink" title="执行pod update想要更新某一个库时"></a>执行pod update想要更新某一个库时</h5><p><code>pod update XXX</code></p>
 <p><code>pod update XXX --verbose --no-repo-update</code></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IOS/">IOS</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-1
- 
-
-  
-    <article id="post-关于多台MAC共用同一开发证书" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/04/20/关于多台MAC共用同一开发证书/" class="article-date">
-  	<time datetime="2016-04-20T05:27:25.000Z" itemprop="datePublished">2016-04-20</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/20/关于多台MAC共用同一开发证书/">关于多台MAC共用同一开发证书</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="多台设备共用一个开发者账号"><a href="#多台设备共用一个开发者账号" class="headerlink" title="多台设备共用一个开发者账号"></a>多台设备共用一个开发者账号</h2><h3 id="前提："><a href="#前提：" class="headerlink" title="前提："></a>前提：</h3><p>有一台设备已经配置好开发者证书</p>
-<h3 id="第一步-（在配置好设备上）"><a href="#第一步-（在配置好设备上）" class="headerlink" title="第一步:（在配置好设备上）"></a>第一步:（在配置好设备上）</h3><ul>
-<li>1.打开keychain-&gt;秘钥-&gt;私钥</li>
-</ul>
-<ul>
-<li>2.找到私钥-&gt; 导出为p12文件。</li>
-</ul>
-<ul>
-<li>3.把p12文件的私钥放在需要配置的设备上安装。</li>
-</ul>
-<h3 id="第二步-在新设备上"><a href="#第二步-在新设备上" class="headerlink" title="第二步:(在新设备上)"></a>第二步:(在新设备上)</h3><ul>
-<li>打开 app developer center 下载两个证书和两个PP文件。</li>
-</ul>
-<ul>
-<li>本地安装</li>
-</ul>
-<h3 id="第三步-（在新设备上）"><a href="#第三步-（在新设备上）" class="headerlink" title="第三步:（在新设备上）"></a>第三步:（在新设备上）</h3><ul>
-<li>按正常流程真机/打包。</li>
-</ul>
 
       
     </div>
