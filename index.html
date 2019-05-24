@@ -116,7 +116,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/ENVIRONMENT/" style="font-size: 10px;">ENVIRONMENT</a> <a href="/tags/Environment/" style="font-size: 15px;">Environment</a> <a href="/tags/IOS/" style="font-size: 20px;">IOS</a>
+						<a href="/tags/ENVIRONMENT/" style="font-size: 10px;">ENVIRONMENT</a> <a href="/tags/Environment/" style="font-size: 15px;">Environment</a> <a href="/tags/IOS/" style="font-size: 20px;">IOS</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a>
 					</div>
 				</section>
 				
@@ -248,8 +248,8 @@
 <ul>
 <li><strong>不使用shadowPath</strong></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CALayer *imageViewLayer = cell.imageView.layer;</span><br><span class="line">imageViewLayer.shadowColor = [UIColor blackColor].CGColor;</span><br><span class="line">imageViewLayer.shadowOpacity = 1.0;</span><br><span class="line">imageViewLayer.shadowRadius = 2.0;</span><br><span class="line">imageViewLayer.shadowOffset = CGSizeMake(1.0, 1.0);</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">+ **使用shadowPath**</span><br></pre></td></tr></table></figure>
-<p>imageViewLayer.shadowPath = CGPathCreateWithRect(imageRect, NULL);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">#### 2.裁剪图片为圆:</span><br><span class="line">-------------------------------------------------- </span><br><span class="line"></span><br><span class="line">+ **使用CornerRadius：**</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><figcaption><span>*imageViewLayer = cell.imageView.layer;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">imageViewLayer.shadowColor = [UIColor blackColor].CGColor;</span><br><span class="line">imageViewLayer.shadowOpacity = 1.0;</span><br><span class="line">imageViewLayer.shadowRadius = 2.0;</span><br><span class="line">imageViewLayer.shadowOffset = CGSizeMake(1.0, 1.0);</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">+ **使用shadowPath**</span><br></pre></td></tr></table></figure>
+<p>imageViewLayer.shadowPath = CGPathCreateWithRect(imageRect, NULL);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 2.裁剪图片为圆:</span><br><span class="line">-------------------------------------------------- </span><br><span class="line"></span><br><span class="line">+ **使用CornerRadius：**</span><br></pre></td></tr></table></figure></p>
 <p>CALayer *imageViewLayer = cell.imageView.layer;</p>
 <p>imageViewLayer.cornerRadius = imageHeight / 2.0;</p>
 <p>imageViewLayer.masksToBounds = YES;</p>
@@ -272,7 +272,7 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IOS/">IOS</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
 	</div>
 
       
