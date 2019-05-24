@@ -77,7 +77,7 @@
 						<li>Links</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -248,14 +248,12 @@
 <ul>
 <li><strong>不使用shadowPath</strong></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CALayer *imageViewLayer = cell.imageView.layer;</span><br><span class="line">imageViewLayer.shadowColor = [UIColor blackColor].CGColor;</span><br><span class="line">imageViewLayer.shadowOpacity = 1.0;</span><br><span class="line">imageViewLayer.shadowRadius = 2.0;</span><br><span class="line">imageViewLayer.shadowOffset = CGSizeMake(1.0, 1.0);</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">+ **使用shadowPath**</span><br></pre></td></tr></table></figure>
-<p>imageViewLayer.shadowPath = CGPathCreateWithRect(imageRect, NULL);</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 2.裁剪图片为圆:</span><br><span class="line">-------------------------------------------------- </span><br><span class="line"></span><br><span class="line">+ **使用CornerRadius：**</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CALayer *imageViewLayer = cell.imageView.layer;</span><br><span class="line">imageViewLayer.shadowColor = [UIColor blackColor].CGColor;</span><br><span class="line">imageViewLayer.shadowOpacity = 1.0;</span><br><span class="line">imageViewLayer.shadowRadius = 2.0;</span><br><span class="line">imageViewLayer.shadowOffset = CGSizeMake(1.0, 1.0);</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">+ **使用shadowPath**</span><br></pre></td></tr></table></figure>
+<p>imageViewLayer.shadowPath = CGPathCreateWithRect(imageRect, NULL);<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">#### 2.裁剪图片为圆:</span><br><span class="line">-------------------------------------------------- </span><br><span class="line"></span><br><span class="line">+ **使用CornerRadius：**</span><br></pre></td></tr></table></figure></p>
 <p>CALayer *imageViewLayer = cell.imageView.layer;</p>
 <p>imageViewLayer.cornerRadius = imageHeight / 2.0;</p>
 <p>imageViewLayer.masksToBounds = YES;</p>
-<p>利用一张中间为透明圆形的图片来进行遮盖,虽然会引起blending,但性能仍然高于offerScreen。</p>
-<p>```</p>
+<p>利用一张中间为透明圆形的图片来进行遮盖,虽然会引起blending,但性能仍然高于offerScreen。<br>```</p>
 <h4 id="3-关于blending"><a href="#3-关于blending" class="headerlink" title="3. 关于blending"></a>3. 关于blending</h4><hr>
 <p>前面提到了用透明圆形的图片来进行遮盖,会引起blending。blending也会耗费性能。</p>
 <p>：） 笑。如果阅读这篇文章的读者看到这里,是不是觉得已经无眼看下去了。哈哈,我自己学习总结到这里也是感受到了长路慢慢,但是我们仍然还是要不断上下求索的。 ：）</p>
