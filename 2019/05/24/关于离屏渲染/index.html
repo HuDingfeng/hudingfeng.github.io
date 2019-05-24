@@ -4,27 +4,36 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>超棒的iOS开发学习网站 | Hu Dingfeng Blog</title>
+  <title>关于离屏渲染 | Hu Dingfeng Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="objc.io
-这个网站由世界级的iOS工程师每月进行更新。上面可以看到关于某些话题的高质量文章和深度评论，同时他们还提供了基于订阅的杂志iPad应用。该网站由Chris Eidhof、Daniel Eggert和Florian Kugler发现并提供。
-Subjective-C
-该网站以解析和重构创新模式和著名应用的UI而闻名。该网站为他们的实验提供程序性文章和代码库。由Sam Page主笔。有">
+  <meta name="description" content="会造成 offscreen rendering的原因有：============================ 
+
+Any layer with a mask (layer.mask)
+
+Any layer with layer.masksToBounds being true
+
+Any layer with layer.allowsGroupOpacity set to YES and lay">
 <meta property="og:type" content="article">
-<meta property="og:title" content="超棒的iOS开发学习网站">
-<meta property="og:url" content="www.hudingfeng.com/2019/03/05/ios-blogs/index.html">
+<meta property="og:title" content="关于离屏渲染">
+<meta property="og:url" content="www.hudingfeng.com/2019/05/24/关于离屏渲染/index.html">
 <meta property="og:site_name" content="Hu Dingfeng Blog">
-<meta property="og:description" content="objc.io
-这个网站由世界级的iOS工程师每月进行更新。上面可以看到关于某些话题的高质量文章和深度评论，同时他们还提供了基于订阅的杂志iPad应用。该网站由Chris Eidhof、Daniel Eggert和Florian Kugler发现并提供。
-Subjective-C
-该网站以解析和重构创新模式和著名应用的UI而闻名。该网站为他们的实验提供程序性文章和代码库。由Sam Page主笔。有">
-<meta property="og:updated_time" content="2019-03-05T09:03:59.835Z">
+<meta property="og:description" content="会造成 offscreen rendering的原因有：============================ 
+
+Any layer with a mask (layer.mask)
+
+Any layer with layer.masksToBounds being true
+
+Any layer with layer.allowsGroupOpacity set to YES and lay">
+<meta property="og:updated_time" content="2019-05-24T07:59:28.728Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="超棒的iOS开发学习网站">
-<meta name="twitter:description" content="objc.io
-这个网站由世界级的iOS工程师每月进行更新。上面可以看到关于某些话题的高质量文章和深度评论，同时他们还提供了基于订阅的杂志iPad应用。该网站由Chris Eidhof、Daniel Eggert和Florian Kugler发现并提供。
-Subjective-C
-该网站以解析和重构创新模式和著名应用的UI而闻名。该网站为他们的实验提供程序性文章和代码库。由Sam Page主笔。有">
+<meta name="twitter:title" content="关于离屏渲染">
+<meta name="twitter:description" content="会造成 offscreen rendering的原因有：============================ 
+
+Any layer with a mask (layer.mask)
+
+Any layer with layer.masksToBounds being true
+
+Any layer with layer.allowsGroupOpacity set to YES and lay">
   
     <link rel="alternative" href="/atom.xml" title="Hu Dingfeng Blog" type="application/atom+xml">
   
@@ -210,11 +219,11 @@ Subjective-C
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-ios-blogs" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-关于离屏渲染" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2019/03/05/ios-blogs/" class="article-date">
-  	<time datetime="2019-03-05T08:18:46.000Z" itemprop="datePublished">2019-03-05</time>
+      <a href="/2019/05/24/关于离屏渲染/" class="article-date">
+  	<time datetime="2019-05-24T03:37:11.000Z" itemprop="datePublished">2019-05-24</time>
 </a>
     </div>
   
@@ -227,7 +236,7 @@ Subjective-C
         
   
     <h1 class="article-title" itemprop="name">
-      超棒的iOS开发学习网站
+      关于离屏渲染
     </h1>
   
 
@@ -236,7 +245,7 @@ Subjective-C
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/IOS/">IOS</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
 	</div>
 
         
@@ -247,36 +256,44 @@ Subjective-C
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://www.objc.io/" target="_blank" rel="external">objc.io</a></p>
-<p>这个网站由世界级的iOS工程师每月进行更新。上面可以看到关于某些话题的高质量文章和深度评论，同时他们还提供了基于订阅的杂志iPad应用。该网站由Chris Eidhof、Daniel Eggert和Florian Kugler发现并提供。</p>
-<p><a href="http://subjc.com/" target="_blank" rel="external">Subjective-C</a></p>
-<p>该网站以解析和重构创新模式和著名应用的UI而闻名。该网站为他们的实验提供程序性文章和代码库。由Sam Page主笔。有点遗憾的是，作者决定暂停更新网站，不过好在那些旧的教程仍然很值得一看。</p>
-<p><a href="https://nshipster.com/" target="_blank" rel="external">NSHipster</a></p>
-<p>以类为基础进行逐步讲解并附有示例代码的网站。其文章探讨了编程风格，以及最前沿的类的使用和实现。由AFNetworking的作者Mattt Thompson创建，目前由Nate Cook进行管理。</p>
-<p><a href="http://petersteinberger.com/" target="_blank" rel="external">Peter Steinberger</a></p>
-<p>本站为个人博客，其作者是著名的iOS商业PDF库的创始人，该产品曾被Dropbox和Evernote这样著名的应用使用过。网站内容包括一些令人惊叹的黑客资源和debug资源，以帮助开发者学习和实践。</p>
-<p><a href="https://oleb.net/" target="_blank" rel="external">Ole Begemann</a></p>
-<p>本博客重点分享个人经历,同时讨论代码样式和API设计,有时还会透露一些苹果所使用的私密而有趣的类。</p>
-<p><a href="http://floriankugler.com/" target="_blank" rel="external">Florian Kugler</a></p>
-<p>ObjC.IO的合著者所写的个人博客。你可以在上面找到很多关于性能检测的文章和讨论，包括应用于多核心数据的UI绘制。</p>
-<p><a href="https://www.mikeash.com/pyblog/" target="_blank" rel="external">NSBlog</a></p>
-<p>用有趣的问答形式创作，包含了关于Objective-C和其他主题的深度问题。如果你对于重建像NSObject这样的基本类持有疑问，可以向Mike Ash提出。</p>
-<p><a href="https://cocoa.tumblr.com/" target="_blank" rel="external">Cocoa</a></p>
-<p>从iOS开发者的Tumblr上摘取的iOS开发源码和深度观察，有点随机但是还是很有用。</p>
-<p>下面有一些博客，可以帮我们获取最新讯息。</p>
-<p><a href="https://iosdevweekly.com/" target="_blank" rel="external">iOS Dev Weekly</a></p>
-<p>自2011年起每周更新，订阅者已经超过20,000。它可以帮我们从网络上获取有用的iOS文章。还提供了Safari的推送通知功能。由Dave Verwer发现并提供。</p>
-<p><a href="http://iosdevelopertips.com/" target="_blank" rel="external">iOS Developer Tips</a></p>
-<p>2008年以来最早的几个每天更新的iOS推送资源之一。包括很多领域的文章，例如开发小技巧、UX、流言、个人经历和故事等。由John Muchow策划。</p>
-<p><a href="https://ios-goodies.com/" target="_blank" rel="external">iOS Goodies</a></p>
-<p>较新的iOS资讯站。内容包括论文、控件/工具、商务、UI以及各种媒体类型等等。由Rui Peres和Tiago Almeida每周更新。</p>
-<p><a href="https://www.appcoda.com/" target="_blank" rel="external">AppCoda</a></p>
-<p>由我在香港的一个开发者朋友创建，他最近辞掉了工作来专心维护这个网站。包括在线的文章和支付后可下载的文章，重点在用于执行的最新的API和结构上。由Simon Ng创建，值得一看。</p>
-<p>两个有价值的原创内容博客。</p>
-<p><a href="http://merowing.info/" target="_blank" rel="external">Krzysztof Zab?ocki</a></p>
-<p>提供关于代码结构、工具和Xcode的技巧，当然，在我第一次发表这篇博客的时候我把它给遗漏了。我们从这些高阶的文章中学到了很多。</p>
-<p><a href="http://iosdevtips.co/" target="_blank" rel="external">iOS Development tips</a></p>
-<p>相对较新的博客，有一些关于使用Xcode和API的细致的提示，即使你再匆忙也值得去看一眼。作者是Rounak Jain。</p>
+        <h4 id="会造成-offscreen-rendering的原因有："><a href="#会造成-offscreen-rendering的原因有：" class="headerlink" title="会造成 offscreen rendering的原因有："></a>会造成 offscreen rendering的原因有：</h4><p>============================ </p>
+<ul>
+<li><p>Any layer with a mask (layer.mask)</p>
+</li>
+<li><p>Any layer with layer.masksToBounds being true</p>
+</li>
+<li><p>Any layer with layer.allowsGroupOpacity set to YES and layer.opacity is less than 1.0</p>
+</li>
+<li><p>Any layer with a drop shadow (layer.shadow*).</p>
+</li>
+<li><p>Any layer with layer.shouldRasterize being true</p>
+</li>
+<li><p>Any layer with layer.cornerRadius, layer.edgeAntialiasingMask, layer.allowsEdgeAntialiasing</p>
+</li>
+</ul>
+<h4 id="1-阴影绘制"><a href="#1-阴影绘制" class="headerlink" title="1.阴影绘制:"></a>1.阴影绘制:</h4><hr>
+<p>使用ShadowPath来替代shadowOffset等属性的设置。<br>两种不同方式来绘制阴影：</p>
+<ul>
+<li><strong>不使用shadowPath</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">CALayer *imageViewLayer = cell.imageView.layer;</span><br><span class="line">imageViewLayer.shadowColor = [UIColor blackColor].CGColor;</span><br><span class="line">imageViewLayer.shadowOpacity = 1.0;</span><br><span class="line">imageViewLayer.shadowRadius = 2.0;</span><br><span class="line">imageViewLayer.shadowOffset = CGSizeMake(1.0, 1.0);</span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">+ **使用shadowPath**</span><br></pre></td></tr></table></figure>
+<p>imageViewLayer.shadowPath = CGPathCreateWithRect(imageRect, NULL);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 2.裁剪图片为圆:</span><br><span class="line">-------------------------------------------------- </span><br><span class="line"></span><br><span class="line">+ **使用CornerRadius：**</span><br></pre></td></tr></table></figure>
+<p>CALayer *imageViewLayer = cell.imageView.layer;</p>
+<p>imageViewLayer.cornerRadius = imageHeight / 2.0;</p>
+<p>imageViewLayer.masksToBounds = YES;</p>
+<p>利用一张中间为透明圆形的图片来进行遮盖,虽然会引起blending,但性能仍然高于offerScreen。</p>
+<p>```</p>
+<h4 id="3-关于blending"><a href="#3-关于blending" class="headerlink" title="3. 关于blending"></a>3. 关于blending</h4><hr>
+<p>前面提到了用透明圆形的图片来进行遮盖,会引起blending。blending也会耗费性能。</p>
+<p>：） 笑。如果阅读这篇文章的读者看到这里,是不是觉得已经无眼看下去了。哈哈,我自己学习总结到这里也是感受到了长路慢慢,但是我们仍然还是要不断上下求索的。 ：）</p>
+<p>好了 接下来让我们来认识一下Blending.</p>
+<p>什么是Blending？<br>在iOS的图形处理中,blending主要指的是混合像素颜色的计算。最直观的例子就是,我们把两个图层叠加在一起,如果第一个图层的透明的,则最终像素的颜色计算需要将第二个图层也考虑进来。这一过程即为Blending。</p>
+<p>会导致blending的原因:</p>
+<p>layer(UIView)的Alpha &lt; 1</p>
+<p>UIImgaeView的image含有Alpha channel(即使UIImageView的alpha是1,但只要image含透明通道,则仍会导致Blending)<br>为什么Blending会导致性能的损失？</p>
+<p>原因是很直观的,如果一个图层是不透明的,则系统直接显示该图层的颜色即可。而如果图层是透明的,则会引入更多的计算,因为需要把下面的图层也包括进来,进行混合后颜色的计算。</p>
+<p>在了解完Blending之后,我们就知道为什么很多优化准则都需要我们尽量使用不透明图层了。接下来就是在开发中留意和进行优化了。</p>
 
       
     </div>
@@ -286,18 +303,9 @@ Subjective-C
     
 <nav id="article-nav">
   
-    <a href="/2019/05/24/关于离屏渲染/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          关于离屏渲染
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/12/04/小程序资源合集/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">小程序资源合集</div>
+    <a href="/2019/03/05/ios-blogs/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">超棒的iOS开发学习网站</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -332,7 +340,7 @@ Subjective-C
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="ios-blogs" data-title="超棒的iOS开发学习网站" data-url="www.hudingfeng.com/2019/03/05/ios-blogs/"></div>
+	<div class="ds-thread" data-thread-key="关于离屏渲染" data-title="关于离屏渲染" data-url="www.hudingfeng.com/2019/05/24/关于离屏渲染/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
